@@ -6,6 +6,7 @@ import (
 	"hydroponics/server/middelware"
 
 	"github.com/gin-gonic/gin"
+	"github.com/gin-contrib/cors"
 )
 
 func main() {
@@ -16,11 +17,13 @@ func main() {
 
 	r := gin.Default()
 	r.Use(middelware.Database(db))
+	r.Use(cors.Default())
 	
 	r.POST("/temperature", dao.CreateTemperature)
 	r.GET("/temperatures", dao.GetTemperatures)
 	//r.GET("/temperatures/:number", dao.GetXTemperatures)
 	//r.DELETE("/temperature", dao.DeleteTemperature)
+	
 
 	r.Run()
 }
