@@ -73,4 +73,3 @@ func GetTemperatures(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, tempResponse)
 }
-

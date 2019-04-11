@@ -21,6 +21,9 @@ func main() {
 	
 	r.POST("/temperature", dao.CreateTemperature)
 	r.GET("/temperatures", dao.GetTemperatures)
+
+	r.POST("/humidity", dao.CreateHumidity)
+	r.GET("/humidities", dao.GetHumidities)
 	//r.GET("/temperatures/:number", dao.GetXTemperatures)
 	//r.DELETE("/temperature", dao.DeleteTemperature)
 	
