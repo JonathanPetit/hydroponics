@@ -5,3 +5,10 @@ CREATE TABLE temperature (
     value decimal,
     savedAt timestamp
 );
+
+CREATE TABLE humidity (
+    id serial PRIMARY KEY,
+    value decimal,
+    savedAt timestamp
+);
+

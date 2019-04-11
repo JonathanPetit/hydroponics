@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+psql -p $DB_PORT -c "TRUNCATE TABLE temperature, humidity RESTART IDENTITY CASCADE;" $DB_NAME
